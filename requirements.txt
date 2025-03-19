@@ -1,0 +1,9 @@
+fastapi
+aiogram
+uvicorn
+python-dotenv
+sqlalchemy
+pydantic_settings
+gspread
+oauth2client
+python-multipart
