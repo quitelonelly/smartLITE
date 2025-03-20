@@ -1,9 +1,14 @@
-from fastapi import FastAPI, Path, Body
+import asyncio
+import tempfile
+import logging
+import json
+import os
+from aiogram.types import BufferedInputFile
+from fastapi import FastAPI, Path, File, UploadFile, Form
+from main import bot
 from handlers import setup_google_sheets, get_telegram_id_by_company_id
 from server.repository import format_message_for_bot
 from server.shemas import TranscriptionData
-from main import bot  # Импортируем бота
-import logging
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
@@ -16,10 +21,15 @@ app = FastAPI(
 @app.post("/transcribe/{id}")
 async def transcribe(
     id: int = Path(..., description="ID компании"),  # ID компании
-    data: TranscriptionData = Body(..., description="Данные транскрипции и анализа")  # JSON данные
+    data: str = Form(..., description="Данные транскрипции и анализа в формате JSON"),  # JSON данные как строка
+    audio_file: UploadFile = File(..., description="Аудиофайл")  # Аудиофайл
 ):
     logger.info(f"Получены данные для компании с ID: {id}.")
     try:
+        # Парсим JSON-данные
+        data_dict = json.loads(data)
+        transcription_data = TranscriptionData(**data_dict)
+
         # Ищем Telegram ID по ID компании
         sheet = setup_google_sheets()
         telegram_id = get_telegram_id_by_company_id(sheet, id)
@@ -28,11 +38,46 @@ async def transcribe(
             logger.error(f"Telegram ID для компании с ID {id} не найден.")
             return {"error": "Telegram ID не найден"}
 
-        # Форматируем данные для отправки в Telegram
-        message = format_message_for_bot(data)
+        # Создаем временный файл для транскрипции (чистый текст, без HTML)
+        with tempfile.NamedTemporaryFile(mode='w+', suffix='.html', delete=False, encoding='utf-8') as temp_file:
+            temp_file.write('\ufeff')  # Добавляем BOM
+            # Записываем транскрипцию в файл
+            for role in transcription_data.role_analysis:
+                temp_file.write(f"<br>👤 {role.role}:</br>")
+                temp_file.write(f"🗣️ Текст: {role.text}\n")
+                temp_file.write(f"<br>⏱️ Время: {role.start_time} - {role.end_time} мс\n\n</br>")
+                temp_file.write("<hr></hr>")
+            temp_file_path = temp_file.name
 
-        # Отправляем сообщение в Telegram
-        await bot.send_message(chat_id=telegram_id, text=message, parse_mode="Markdown")
+        # Читаем содержимое файла и создаем BufferedInputFile
+        with open(temp_file_path, 'rb') as file:
+            file_content = file.read()
+            input_file = BufferedInputFile(file_content, filename="Транскрипция.html")
+
+        # Сохраняем аудиофайл временно
+        audio_path = f"temp_audio_{id}.mp3"
+        with open(audio_path, "wb") as buffer:
+            buffer.write(await audio_file.read())
+
+        # Читаем содержимое аудиофайла и создаем BufferedInputFile
+        with open(audio_path, 'rb') as audio:
+            audio_content = audio.read()
+            input_audio = BufferedInputFile(audio_content, filename=audio_file.filename)
+
+        # Отправляем аудиофайл
+        await bot.send_audio(chat_id=telegram_id, audio=input_audio)
+
+        # Небольшая задержка перед отправкой документа
+        await asyncio.sleep(1)
+
+        # Отправляем документ с транскрипцией
+        await bot.send_document(chat_id=telegram_id, document=input_file)
+
+        # Форматируем остальные данные для отправки в Telegram (в формате HTML)
+        message = format_message_for_bot(transcription_data)
+
+        # Отправляем сообщение с анализом лида и итоговым вердиктом в формате HTML
+        await bot.send_message(chat_id=telegram_id, text=message, parse_mode="HTML")
 
         return {
             "id_company": id,
@@ -41,4 +86,16 @@ async def transcribe(
         }
     except Exception as e:
         logger.error(f"Ошибка при обработке данных: {e}")
-        return {"error": str(e)}    
+        return {"error": str(e)}
+    finally:
+        # Удаляем временные файлы после отправки
+        if 'temp_file_path' in locals():
+            try:
+                os.unlink(temp_file_path)
+            except Exception as e:
+                logger.error(f"Ошибка при удалении временного файла транскрипции: {e}")
+        if 'audio_path' in locals():
+            try:
+                os.unlink(audio_path)
+            except Exception as e:
+                logger.error(f"Ошибка при удалении временного аудиофайла: {e}")
