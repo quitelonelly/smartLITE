@@ -32,4 +32,7 @@ def format_message_for_bot(data: TranscriptionData, manager: str) -> str:
     # Слова-паразиты
     message += f"🔹 *Анализ слов-паразитов:*\n{data.parasite_words_analysis}\n"
 
+    # Договорённость
+    message += f"🔹 *Договорённость:*\n{data.agreement}\n"
+
     return message

@@ -8,7 +8,7 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from keyboards import kb_tran
 from states import Form
-from core import create_new_sheet, get_managers_from_sheet, is_user_registered, setup_google_sheets, update_conversion_sheet, find_company_sheet_by_tgid
+from core import create_new_sheet, get_company_id_by_tgid, get_managers_from_sheet, is_user_registered, setup_google_sheets, update_conversion_sheet, find_company_sheet_by_tgid
 
 # Загружаем переменные окружения из файла .env
 load_dotenv()
@@ -18,8 +18,6 @@ BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
-
-
 
 
 def get_next_id(sheet):
@@ -87,6 +85,9 @@ async def cmd_info(message: types.Message):
     else:
         await message.answer("Таблица компании не найдена.")
 
+import httpx  # Импортируем библиотеку для HTTP-запросов
+from aiogram.types import FSInputFile
+
 async def send_file_handler(message: types.Message, state: FSMContext):
     tgid = message.from_user.id  # Telegram ID пользователя
     
@@ -112,6 +113,62 @@ async def send_file_handler(message: types.Message, state: FSMContext):
     
     await state.set_state(Form.waiting_for_manager)  # Устанавливаем состояние ожидания выбора менеджера
 
+
+async def process_audio(message: types.Message, state: FSMContext):
+    if message.audio:
+        # Получаем данные из состояния
+        data = await state.get_data()
+        manager_name = data.get("selected_manager")
+        
+        if not manager_name:
+            await message.answer("Ошибка: менеджер не выбран.")
+            return
+
+        # Получаем ID компании из таблицы
+        tgid = message.from_user.id
+        sheet = setup_google_sheets()
+        company_id = get_company_id_by_tgid(sheet, tgid)
+
+        if not company_id:
+            await message.answer("Ошибка: ID компании не найден.")
+            return
+
+        # Сохраняем аудиофайл временно
+        audio_path = f"temp_audio_{company_id}.mp3"
+        
+        # Скачиваем аудиофайл
+        file_id = message.audio.file_id
+        file = await bot.get_file(file_id)
+        await bot.download_file(file.file_path, destination=audio_path)
+
+        try:
+            # Отправляем запрос на внешний сервер
+            async with httpx.AsyncClient() as client:
+                with open(audio_path, "rb") as audio_file:
+                    files = {"file": (audio_path, audio_file, "audio/mpeg")}
+                    data = {"id": company_id, "manager_name": manager_name}
+                    response = await client.post(
+                        "http://185.207.0.3:5001/analyze",
+                        files=files,
+                        data=data
+                    )
+
+                if response.status_code == 200:
+                    await message.answer("Файл успешно отправлен на анализ!")
+                else:
+                    await message.answer(f"Ошибка при отправке файла: {response.status_code}")
+        except Exception as e:
+            await message.answer(f"Ошибка при отправке файла: {str(e)}")
+        finally:
+            # Удаляем временный файл
+            if os.path.exists(audio_path):
+                os.unlink(audio_path)
+        
+        # Очищаем состояние
+        await state.clear()
+    else:
+        await message.answer("Пожалуйста, загрузите аудиофайл.")
+
 async def process_manager_selection(callback: types.CallbackQuery, state: FSMContext):
     # Получаем выбранного менеджера из callback_data
     manager_name = callback.data.replace("manager_", "")
@@ -120,21 +177,15 @@ async def process_manager_selection(callback: types.CallbackQuery, state: FSMCon
     await state.update_data(selected_manager=manager_name)
     
     # Отправляем подтверждение
-    await callback.message.answer(f"Вы выбрали менеджера: {manager_name}")
+    await callback.message.answer(f"Вы выбрали менеджера: {manager_name}. Теперь отправьте аудиофайл.")
     
-    # Очищаем состояние
-    await state.clear()
+    # Устанавливаем состояние ожидания аудиофайла
+    await state.set_state(Form.waiting_for_audio)
 
-async def process_audio(message: types.Message, state: FSMContext):
-    if message.audio:
-        await message.answer("Спасибо за загрузку аудиофайла!")
-        await state.clear()  # Очищаем состояние
-    else:
-        await message.answer("Пожалуйста, загрузите аудиофайл.")
 
 async def cmd_add_manager(message: types.Message, state: FSMContext):
     await message.answer("Введите имя менеджера:")
-    await state.set_state(Form.waiting_for_manager_name)
+    await state.set_state(Form.waiting_for_manager)
 
 async def process_manager_name(message: types.Message, state: FSMContext):
     manager_name = message.text
@@ -171,6 +222,6 @@ def reg_handlers(dp: Dispatcher):
     dp.message.register(send_file_handler, F.text == 'Отправить файл')  # Обработчик кнопки "Отправить файл"
     dp.message.register(process_audio, Form.waiting_for_audio)  # Обработчик аудиофайла
     dp.message.register(cmd_add_manager, Command(commands=['add_manager']))  # Обработчик команды /add_manager
-    dp.message.register(process_manager_name, Form.waiting_for_manager_name)  # Обработчик ввода имени менеджера
+    dp.message.register(process_manager_name, Form.waiting_for_manager)  # Обработчик ввода имени менеджера
     dp.message.register(cmd_info, Command(commands=['info']))  # Обработчик команды /info
     dp.callback_query.register(process_manager_selection, F.data.startswith("manager_"))  # Обработчик выбора менеджера

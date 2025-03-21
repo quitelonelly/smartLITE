@@ -1,5 +1,5 @@
 import os
-from typing import List
+from typing import List, Optional
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 
@@ -312,3 +312,18 @@ def create_manager_sheet(sheet_url: str, manager_name: str):
 
     except Exception as e:
         print(f"Ошибка при создании листа для менеджера: {e}")
+
+def get_company_id_by_tgid(sheet, tgid: int) -> Optional[int]:
+    """
+    Ищет ID компании по Telegram ID пользователя.
+    Возвращает ID компании или None, если не найдено.
+    """
+    try:
+        all_values = sheet.get_all_values()
+        for row in all_values:
+            if row[1] == str(tgid):  # Telegram ID во втором столбце
+                return int(row[0])  # ID компании в первом столбце
+        return None
+    except Exception as e:
+        print(f"Ошибка при поиске ID компании: {e}")
+        return None

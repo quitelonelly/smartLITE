@@ -25,4 +25,5 @@ class TranscriptionData(BaseModel):
     transcript: str
     role_analysis: List[RoleAnalysis]
     lead_analysis: LeadAnalysis
-    parasite_words_analysis: str  # Теперь на верхнем уровне
+    parasite_words_analysis: str
+    agreement: str  # Добавляем поле agreement
