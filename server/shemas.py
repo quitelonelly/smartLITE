@@ -1,6 +1,5 @@
-# Модель для анализа ролей
 from pydantic import BaseModel
-from typing import List, Dict
+from typing import List, Dict, Optional
 
 class RoleAnalysis(BaseModel):
     text: str
@@ -9,21 +8,21 @@ class RoleAnalysis(BaseModel):
     start_time: int
     end_time: int
 
-# Модель для анализа этапов
 class StageAnalysis(BaseModel):
     qualified: bool
     reason: str
-    recommendation: str
+    recommendation: Optional[str] = None
 
-# Модель для анализа лида
 class LeadAnalysis(BaseModel):
     stages: Dict[str, StageAnalysis]
     final_verdict: str
     final_reason: str
+    final_full_reason: str
+    kval_percentage: float
 
-# Модель для основного JSON
 class TranscriptionData(BaseModel):
     status: str
     transcript: str
     role_analysis: List[RoleAnalysis]
     lead_analysis: LeadAnalysis
+    parasite_words_analysis: str  # Теперь на верхнем уровне

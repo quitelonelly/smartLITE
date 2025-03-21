@@ -6,7 +6,7 @@ import os
 from aiogram.types import BufferedInputFile
 from fastapi import FastAPI, Path, File, UploadFile, Form
 from main import bot
-from handlers import setup_google_sheets, get_telegram_id_by_company_id
+from core import setup_google_sheets, get_telegram_id_by_company_id
 from server.repository import format_message_for_bot
 from server.shemas import TranscriptionData
 
@@ -17,6 +17,17 @@ logger = logging.getLogger(__name__)
 app = FastAPI(
     title="Smart"
 )
+
+def ms_to_seconds(ms: int) -> float:
+    """Преобразует миллисекунды в секунды."""
+    return ms / 1000
+
+def calculate_total_call_duration(role_analysis: list) -> float:
+    """Рассчитывает общее время звонка."""
+    total_duration = 0
+    for role in role_analysis:
+        total_duration += role.end_time - role.start_time
+    return ms_to_seconds(total_duration)
 
 @app.post("/transcribe/{id}")
 async def transcribe(
@@ -38,14 +49,20 @@ async def transcribe(
             logger.error(f"Telegram ID для компании с ID {id} не найден.")
             return {"error": "Telegram ID не найден"}
 
+        # Рассчитываем общее время звонка
+        total_duration = calculate_total_call_duration(transcription_data.role_analysis)
+
         # Создаем временный файл для транскрипции (чистый текст, без HTML)
         with tempfile.NamedTemporaryFile(mode='w+', suffix='.html', delete=False, encoding='utf-8') as temp_file:
             temp_file.write('\ufeff')  # Добавляем BOM
             # Записываем транскрипцию в файл
+            temp_file.write(f"<h2>Общее время звонка: {total_duration:.2f} секунд</h2>\n\n")
             for role in transcription_data.role_analysis:
+                start_time = ms_to_seconds(role.start_time)
+                end_time = ms_to_seconds(role.end_time)
                 temp_file.write(f"<br>👤 {role.role}:</br>")
                 temp_file.write(f"🗣️ Текст: {role.text}\n")
-                temp_file.write(f"<br>⏱️ Время: {role.start_time} - {role.end_time} мс\n\n</br>")
+                temp_file.write(f"<br>⏱️ Время: {start_time:.2f} - {end_time:.2f} секунд\n\n</br>")
                 temp_file.write("<hr></hr>")
             temp_file_path = temp_file.name
 
