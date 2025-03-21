@@ -6,7 +6,7 @@ import os
 from aiogram.types import BufferedInputFile
 from fastapi import FastAPI, Path, File, UploadFile, Form
 from main import bot
-from core import setup_google_sheets, get_telegram_id_by_company_id
+from core import create_manager_sheet, setup_google_sheets, get_telegram_id_by_company_id, find_company_sheet_by_tgid, write_call_data_to_manager_sheet
 from server.repository import format_message_for_bot
 from server.shemas import TranscriptionData
 
@@ -53,55 +53,75 @@ async def transcribe(
         # Рассчитываем общее время звонка
         total_duration = calculate_total_call_duration(transcription_data.role_analysis)
 
-        # Создаем временный файл для транскрипции (чистый текст, без HTML)
-        with tempfile.NamedTemporaryFile(mode='w+', suffix='.html', delete=False, encoding='utf-8') as temp_file:
-            temp_file.write('\ufeff')  # Добавляем BOM
-            # Записываем транскрипцию в файл
-            temp_file.write(f"<h2>Общее время звонка: {total_duration:.2f} секунд</h2>\n\n")
-            for role in transcription_data.role_analysis:
-                start_time = ms_to_seconds(role.start_time)
-                end_time = ms_to_seconds(role.end_time)
-                temp_file.write(f"<br>👤 {role.role}:</br>")
-                temp_file.write(f"🗣️ Текст: {role.text}\n")
-                temp_file.write(f"<br>⏱️ Время: {start_time:.2f} - {end_time:.2f} секунд\n\n</br>")
-                temp_file.write("<hr></hr>")
-            temp_file_path = temp_file.name
+        # Получаем URL таблицы компании
+        company_sheet_url = find_company_sheet_by_tgid(telegram_id)
+        
+        if not company_sheet_url:
+            logger.error(f"Таблица компании для Telegram ID {telegram_id} не найдена.")
+            return {"error": "Таблица компании не найдена"}
 
-        # Читаем содержимое файла и создаем BufferedInputFile
-        with open(temp_file_path, 'rb') as file:
-            file_content = file.read()
-            input_file = BufferedInputFile(file_content, filename="Транскрипция.html")
+        # Создаем шапку таблицы, если она еще не создана
+        create_manager_sheet(company_sheet_url, manager)
 
-        # Сохраняем аудиофайл временно
-        audio_path = f"temp_audio_{id}.mp3"
-        with open(audio_path, "wb") as buffer:
-            buffer.write(await audio_file.read())
+        # Записываем данные в лист менеджера
+        is_qualified = transcription_data.lead_analysis.final_verdict == "квалифицированный"
+        kval_percentage = transcription_data.lead_analysis.kval_percentage
+        parasite_words = transcription_data.parasite_words_analysis
+        write_call_data_to_manager_sheet(company_sheet_url, manager, total_duration, is_qualified, kval_percentage, parasite_words)
 
-        # Читаем содержимое аудиофайла и создаем BufferedInputFile
-        with open(audio_path, 'rb') as audio:
-            audio_content = audio.read()
-            input_audio = BufferedInputFile(audio_content, filename=audio_file.filename)
+        # Если диалог неквалифицированный, отправляем данные в Telegram
+        if not is_qualified:
+            # Создаем временный файл для транскрипции (чистый текст, без HTML)
+            with tempfile.NamedTemporaryFile(mode='w+', suffix='.html', delete=False, encoding='utf-8') as temp_file:
+                temp_file.write('\ufeff')  # Добавляем BOM
+                # Записываем транскрипцию в файл
+                temp_file.write(f"<h2>Общее время звонка: {total_duration:.2f} секунд</h2>\n\n")
+                temp_file.write(f"Менеджер: {manager}")
+                for role in transcription_data.role_analysis:
+                    start_time = ms_to_seconds(role.start_time)
+                    end_time = ms_to_seconds(role.end_time)
+                    temp_file.write(f"<br>👤 {role.role}:</br>")
+                    temp_file.write(f"🗣️ Текст: {role.text}\n")
+                    temp_file.write(f"<br>⏱️ Время: {start_time:.2f} - {end_time:.2f} секунд\n\n</br>")
+                    temp_file.write("<hr></hr>")
+                temp_file_path = temp_file.name
 
-        # Отправляем аудиофайл
-        await bot.send_audio(chat_id=telegram_id, audio=input_audio)
+            # Читаем содержимое файла и создаем BufferedInputFile
+            with open(temp_file_path, 'rb') as file:
+                file_content = file.read()
+                input_file = BufferedInputFile(file_content, filename="Транскрипция.html")
 
-        # Небольшая задержка перед отправкой документа
-        await asyncio.sleep(1)
+            # Сохраняем аудиофайл временно
+            audio_path = f"temp_audio_{id}.mp3"
+            with open(audio_path, "wb") as buffer:
+                buffer.write(await audio_file.read())
 
-        # Отправляем документ с транскрипцией
-        await bot.send_document(chat_id=telegram_id, document=input_file)
+            # Читаем содержимое аудиофайла и создаем BufferedInputFile
+            with open(audio_path, 'rb') as audio:
+                audio_content = audio.read()
+                input_audio = BufferedInputFile(audio_content, filename=audio_file.filename)
 
-        # Форматируем остальные данные для отправки в Telegram (в формате HTML)
-        message = format_message_for_bot(transcription_data, manager)  # Передаем менеджера в функцию
+            # Отправляем аудиофайл
+            await bot.send_audio(chat_id=telegram_id, audio=input_audio)
 
-        # Отправляем сообщение с анализом лида и итоговым вердиктом в формате HTML
-        await bot.send_message(chat_id=telegram_id, text=message, parse_mode="HTML")
+            # Небольшая задержка перед отправкой документа
+            await asyncio.sleep(1)
+
+            # Отправляем документ с транскрипцией
+            await bot.send_document(chat_id=telegram_id, document=input_file)
+
+            # Форматируем остальные данные для отправки в Telegram (в формате HTML)
+            message = format_message_for_bot(transcription_data, manager)  # Передаем менеджера в функцию
+
+            # Отправляем сообщение с анализом лида и итоговым вердиктом в формате HTML
+            await bot.send_message(chat_id=telegram_id, text=message, parse_mode="HTML")
 
         return {
             "id_company": id,
             "status": "success",
-            "message": "Данные успешно отправлены в Telegram.",
-            "manager": manager  # Возвращаем имя менеджера в ответе
+            "message": "Данные успешно обработаны.",
+            "manager": manager,  # Возвращаем имя менеджера в ответе
+            "is_qualified": is_qualified,  # Возвращаем статус квалификации
         }
     except Exception as e:
         logger.error(f"Ошибка при обработке данных: {e}")
