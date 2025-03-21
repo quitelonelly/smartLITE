@@ -33,7 +33,8 @@ def calculate_total_call_duration(role_analysis: list) -> float:
 async def transcribe(
     id: int = Path(..., description="ID компании"),  # ID компании
     data: str = Form(..., description="Данные транскрипции и анализа в формате JSON"),  # JSON данные как строка
-    audio_file: UploadFile = File(..., description="Аудиофайл")  # Аудиофайл
+    audio_file: UploadFile = File(..., description="Аудиофайл"),  # Аудиофайл
+    manager: str = Form(..., description="Имя менеджера")  # Имя менеджера
 ):
     logger.info(f"Получены данные для компании с ID: {id}.")
     try:
@@ -91,7 +92,7 @@ async def transcribe(
         await bot.send_document(chat_id=telegram_id, document=input_file)
 
         # Форматируем остальные данные для отправки в Telegram (в формате HTML)
-        message = format_message_for_bot(transcription_data)
+        message = format_message_for_bot(transcription_data, manager)  # Передаем менеджера в функцию
 
         # Отправляем сообщение с анализом лида и итоговым вердиктом в формате HTML
         await bot.send_message(chat_id=telegram_id, text=message, parse_mode="HTML")
@@ -99,7 +100,8 @@ async def transcribe(
         return {
             "id_company": id,
             "status": "success",
-            "message": "Данные успешно отправлены в Telegram."
+            "message": "Данные успешно отправлены в Telegram.",
+            "manager": manager  # Возвращаем имя менеджера в ответе
         }
     except Exception as e:
         logger.error(f"Ошибка при обработке данных: {e}")

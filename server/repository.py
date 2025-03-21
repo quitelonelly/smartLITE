@@ -1,10 +1,13 @@
 from server.shemas import TranscriptionData
 
-def format_message_for_bot(data: TranscriptionData) -> str:
+def format_message_for_bot(data: TranscriptionData, manager: str) -> str:
     """
     Форматирует данные для отправки в Telegram (анализ лида и итоговый вердикт).
     """
     message = "📄 *Анализ лида и итоговый вердикт*\n\n"
+    
+    # Добавляем информацию о менеджере
+    message += f"👤 *Менеджер:* {manager}\n\n"
     
     # Добавляем общее время звонка
     total_duration = sum((role.end_time - role.start_time) for role in data.role_analysis) / 1000
@@ -28,7 +31,7 @@ def format_message_for_bot(data: TranscriptionData) -> str:
         f"📊 *Процент квалификации:* {data.lead_analysis.kval_percentage}%\n\n"
     )
     
-    # Добавляем анализ слов-паразитов (теперь из верхнего уровня)
+    # Добавляем анализ слов-паразитов
     message += (
         f"🔹 *Анализ слов-паразитов:*\n"
         f"{data.parasite_words_analysis}\n"
