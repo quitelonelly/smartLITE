@@ -3,20 +3,29 @@ import tempfile
 import logging
 import json
 import os
-from aiogram.types import BufferedInputFile
-from fastapi import FastAPI, Path, File, UploadFile, Form
+from typing import Optional
+from aiogram.types import BufferedInputFile, InputMediaAudio, InputMediaDocument
+from aiogram.exceptions import TelegramNetworkError
+from fastapi import FastAPI, Path, File, UploadFile, Form, HTTPException
 from main import bot
-from core import create_manager_sheet, setup_google_sheets, get_telegram_id_by_company_id, find_company_sheet_by_tgid, write_call_data_to_manager_sheet
+from core import (
+    create_manager_sheet,
+    setup_google_sheets,
+    get_telegram_id_by_company_id,
+    find_company_sheet_by_tgid,
+    write_call_data_to_manager_sheet
+)
 from server.repository import format_message_for_bot
 from server.shemas import TranscriptionData
 
 # Настройка логирования
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 logger = logging.getLogger(__name__)
 
-app = FastAPI(
-    title="Smart"
-)
+app = FastAPI(title="Smart Call Analyzer")
 
 def ms_to_seconds(ms: int) -> float:
     """Преобразует миллисекунды в секунды."""
@@ -24,117 +33,183 @@ def ms_to_seconds(ms: int) -> float:
 
 def calculate_total_call_duration(role_analysis: list) -> float:
     """Рассчитывает общее время звонка."""
-    total_duration = 0
-    for role in role_analysis:
-        total_duration += role.end_time - role.start_time
-    return ms_to_seconds(total_duration)
+    return ms_to_seconds(sum(role.end_time - role.start_time for role in role_analysis))
 
-@app.post("/transcribe/{id}")
-async def transcribe(
-    id: int = Path(..., description="ID компании"),  # ID компании
-    data: str = Form(..., description="Данные транскрипции и анализа в формате JSON"),  # JSON данные как строка
-    audio_file: UploadFile = File(..., description="Аудиофайл"),  # Аудиофайл
-    manager: str = Form(..., description="Имя менеджера")  # Имя менеджера
-):
-    logger.info(f"Получены данные для компании с ID: {id}.")
+async def save_temp_file(content: bytes, prefix: str, suffix: str) -> str:
+    """Создает временный файл и возвращает путь к нему."""
     try:
-        # Парсим JSON-данные
-        data_dict = json.loads(data)
-        transcription_data = TranscriptionData(**data_dict)
+        with tempfile.NamedTemporaryFile(prefix=prefix, suffix=suffix, delete=False) as tmp:
+            tmp.write(content)
+            return tmp.name
+    except Exception as e:
+        logger.error(f"Ошибка при создании временного файла: {e}")
+        raise
 
-        # Ищем Telegram ID по ID компании
-        sheet = setup_google_sheets()
-        telegram_id = get_telegram_id_by_company_id(sheet, id)
+async def cleanup_temp_files(*file_paths: Optional[str]):
+    """Удаляет временные файлы."""
+    for path in file_paths:
+        if path and os.path.exists(path):
+            try:
+                os.unlink(path)
+            except Exception as e:
+                logger.error(f"Ошибка при удалении временного файла {path}: {e}")
 
-        if not telegram_id:
-            logger.error(f"Telegram ID для компании с ID {id} не найден.")
-            return {"error": "Telegram ID не найден"}
+@app.post("/transcribe/{company_id}")
+async def transcribe(
+    company_id: int = Path(..., description="ID компании", gt=0),
+    data: str = Form(..., description="Данные транскрипции в формате JSON"),
+    audio_file: UploadFile = File(..., description="Аудиофайл звонка"),
+    manager: str = Form(..., description="Имя менеджера", min_length=2)
+):
+    """Обрабатывает данные звонка и отправляет результаты в Telegram."""
+    logger.info(f"Начата обработка звонка для компании ID: {company_id}, менеджер: {manager}")
+    
+    temp_file_path = None
+    audio_path = None
+    sent_messages = []  # Для хранения отправленных сообщений (на случай отката)
 
-        # Рассчитываем общее время звонка
-        total_duration = calculate_total_call_duration(transcription_data.role_analysis)
+    try:
+        # Валидация и обработка входных данных
+        await audio_file.seek(0)
+        audio_content = await audio_file.read()
+        logger.info(f"Получен аудиофайл '{audio_file.filename}' размером {len(audio_content)} байт")
 
-        # Получаем URL таблицы компании
+        # Парсинг JSON данных
+        try:
+            data_dict = json.loads(data)
+            logger.debug(f"Получены данные транскрипции: {json.dumps(data_dict, indent=2, ensure_ascii=False)}")
+            
+            # Преобразование данных для соответствия схеме
+            if 'lead_qualification' in data_dict and isinstance(data_dict['lead_qualification'], dict):
+                data_dict['lead_qualification']['qualified'] = data_dict['lead_qualification'].get('qualified', 'нет')
+            
+            transcription_data = TranscriptionData(**data_dict)
+        except json.JSONDecodeError as e:
+            raise HTTPException(status_code=400, detail="Неверный формат JSON данных")
+        except Exception as e:
+            logger.error(f"Ошибка валидации: {str(e)}")
+            raise HTTPException(status_code=422, detail=f"Ошибка валидации данных: {str(e)}")
+
+        # Получение Telegram ID
+        try:
+            sheet = setup_google_sheets()
+            telegram_id = get_telegram_id_by_company_id(sheet, company_id)
+            if not telegram_id:
+                raise HTTPException(status_code=404, detail="Telegram ID не найден")
+        except Exception as e:
+            logger.error(f"Ошибка при работе с Google Sheets: {e}")
+            raise HTTPException(status_code=500, detail="Ошибка при работе с таблицами")
+
+        # Расчет длительности звонка
+        total_duration = sum((role.end_time - role.start_time) for role in transcription_data.role_analysis) / 1000
+
+        # Работа с таблицей компании
         company_sheet_url = find_company_sheet_by_tgid(telegram_id)
-        
         if not company_sheet_url:
-            logger.error(f"Таблица компании для Telegram ID {telegram_id} не найдена.")
-            return {"error": "Таблица компании не найдена"}
+            raise HTTPException(status_code=404, detail="Таблица компании не найдена")
 
-        # Создаем шапку таблицы, если она еще не создана
-        create_manager_sheet(company_sheet_url, manager)
+        # Подготовка данных для записи
+        is_qualified = transcription_data.lead_qualification.qualified in ('да', True)
+        
+        write_call_data_to_manager_sheet(
+            company_sheet_url,
+            manager,
+            data_dict,
+            total_duration
+        )
 
-        # Записываем данные в лист менеджера
-        is_qualified = transcription_data.lead_analysis.final_verdict == "квалифицированный"
-        kval_percentage = transcription_data.lead_analysis.kval_percentage
-        parasite_words = transcription_data.parasite_words_analysis
-        write_call_data_to_manager_sheet(company_sheet_url, manager, total_duration, is_qualified, kval_percentage, parasite_words)
+        # Создание HTML транскрипции
+        html_content = [
+            f"<p>Менеджер: {manager}</p>"
+        ]
 
-        # Если диалог неквалифицированный, отправляем данные в Telegram
-        if not is_qualified:
-            # Создаем временный файл для транскрипции (чистый текст, без HTML)
-            with tempfile.NamedTemporaryFile(mode='w+', suffix='.html', delete=False, encoding='utf-8') as temp_file:
-                temp_file.write('\ufeff')  # Добавляем BOM
-                # Записываем транскрипцию в файл
-                temp_file.write(f"<h2>Общее время звонка: {total_duration:.2f} секунд</h2>\n\n")
-                temp_file.write(f"Менеджер: {manager}")
-                for role in transcription_data.role_analysis:
-                    start_time = ms_to_seconds(role.start_time)
-                    end_time = ms_to_seconds(role.end_time)
-                    temp_file.write(f"<br>👤 {role.role}:</br>")
-                    temp_file.write(f"🗣️ Текст: {role.text}\n")
-                    temp_file.write(f"<br>⏱️ Время: {start_time:.2f} - {end_time:.2f} секунд\n\n</br>")
-                    temp_file.write("<hr></hr>")
-                temp_file_path = temp_file.name
+        for role in transcription_data.role_analysis:
+            start = role.start_time / 1000
+            end = role.end_time / 1000
+            html_content.extend([
+                f"<hr><b>👤 {role.role}:</b>",
+                f"<p>🗣️ Текст: {role.text}</p>",
+            ])
 
-            # Читаем содержимое файла и создаем BufferedInputFile
-            with open(temp_file_path, 'rb') as file:
-                file_content = file.read()
-                input_file = BufferedInputFile(file_content, filename="Транскрипция.html")
+        temp_file_path = await save_temp_file(
+            "\n".join(html_content).encode('utf-8-sig'),
+            f"transcript_{company_id}_",
+            ".html"
+        )
 
-            # Сохраняем аудиофайл временно
-            audio_path = f"temp_audio_{id}.mp3"
-            with open(audio_path, "wb") as buffer:
-                buffer.write(await audio_file.read())
+        # Сохранение аудиофайла
+        audio_path = await save_temp_file(
+            audio_content,
+            f"audio_{company_id}_",
+            os.path.splitext(audio_file.filename)[1]
+        )
 
-            # Читаем содержимое аудиофайла и создаем BufferedInputFile
-            with open(audio_path, 'rb') as audio:
-                audio_content = audio.read()
-                input_audio = BufferedInputFile(audio_content, filename=audio_file.filename)
+        # Отправка файлов в Telegram с обработкой ошибок и повторными попытками
+        max_retries = 3
+        retry_delay = 2  # секунды
 
-            # Отправляем аудиофайл
-            await bot.send_audio(chat_id=telegram_id, audio=input_audio)
+        async def send_with_retry(send_func, *args, **kwargs):
+            for attempt in range(max_retries):
+                try:
+                    result = await send_func(*args, **kwargs)
+                    sent_messages.append(result)  # Сохраняем отправленное сообщение
+                    return result
+                except (TelegramNetworkError, TimeoutError) as e:
+                    if attempt == max_retries - 1:
+                        raise
+                    logger.warning(f"Попытка {attempt + 1} из {max_retries} не удалась. Ошибка: {e}")
+                    await asyncio.sleep(retry_delay * (attempt + 1))
 
-            # Небольшая задержка перед отправкой документа
-            await asyncio.sleep(1)
+        try:
+            # 1. Сначала отправляем аудиофайл
+            await send_with_retry(
+                bot.send_audio,
+                chat_id=telegram_id,
+                audio=BufferedInputFile(audio_content, audio_file.filename),
+            )
 
-            # Отправляем документ с транскрипцией
-            await bot.send_document(chat_id=telegram_id, document=input_file)
+            # 2. Затем отправляем транскрипцию как документ
+            with open(temp_file_path, 'rb') as f:
+                transcript_content = f.read()
+                await send_with_retry(
+                    bot.send_document,
+                    chat_id=telegram_id,
+                    document=BufferedInputFile(transcript_content, "Транскрипция.html"),
+                )
 
-            # Форматируем остальные данные для отправки в Telegram (в формате HTML)
-            message = format_message_for_bot(transcription_data, manager)  # Передаем менеджера в функцию
+            # 3. Отправляем анализ отдельным сообщением
+            message = format_message_for_bot(transcription_data, manager)
+            await send_with_retry(
+                bot.send_message,
+                chat_id=telegram_id,
+                text=message,
+                parse_mode="HTML"
+            )
 
-            # Отправляем сообщение с анализом лида и итоговым вердиктом в формате HTML
-            await bot.send_message(chat_id=telegram_id, text=message, parse_mode="HTML")
+        except Exception as e:
+            logger.error(f"Ошибка при отправке сообщений в Telegram: {e}")
+            
+            # Пытаемся удалить отправленные сообщения при ошибке
+            for msg in sent_messages:
+                try:
+                    await bot.delete_message(chat_id=telegram_id, message_id=msg.message_id)
+                except Exception as delete_error:
+                    logger.error(f"Не удалось удалить сообщение {msg.message_id}: {delete_error}")
+            
+            raise HTTPException(status_code=500, detail="Ошибка при отправке данных в Telegram")
 
         return {
-            "id_company": id,
+            "company_id": company_id,
             "status": "success",
-            "message": "Данные успешно обработаны.",
-            "manager": manager,  # Возвращаем имя менеджера в ответе
-            "is_qualified": is_qualified,  # Возвращаем статус квалификации
+            "manager": manager,
+            "is_qualified": is_qualified,
+            "call_duration": total_duration
         }
+
+    except HTTPException:
+        raise
     except Exception as e:
-        logger.error(f"Ошибка при обработке данных: {e}")
-        return {"error": str(e)}
+        logger.exception(f"Критическая ошибка при обработке звонка: {e}")
+        raise HTTPException(status_code=500, detail="Внутренняя ошибка сервера")
     finally:
-        # Удаляем временные файлы после отправки
-        if 'temp_file_path' in locals():
-            try:
-                os.unlink(temp_file_path)
-            except Exception as e:
-                logger.error(f"Ошибка при удалении временного файла транскрипции: {e}")
-        if 'audio_path' in locals():
-            try:
-                os.unlink(audio_path)
-            except Exception as e:
-                logger.error(f"Ошибка при удалении временного аудиофайла: {e}")
+        await cleanup_temp_files(temp_file_path, audio_path)

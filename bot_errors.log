@@ -1,0 +1,1978 @@
+2025-03-22 14:21:57,599 - server.main - ERROR - Ошибка при обработке данных: Telegram server says - Bad Request: file must be non-empty
+2025-03-22 14:22:21,040 - server.main - ERROR - Ошибка при обработке данных: Telegram server says - Bad Request: file must be non-empty
+2025-03-25 02:20:08,614 - server.main - ERROR - Ошибка при обработке данных: 20 validation errors for TranscriptionData
+status
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.0.speaker
+  Field required [type=missing, input_value={'text': 'Алло.', 'ro...0059, 'end_time': 10599}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.1.speaker
+  Field required [type=missing, input_value={'text': 'Добрый д...0679, 'end_time': 23565}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.2.speaker
+  Field required [type=missing, input_value={'text': 'Пока нет...4767, 'end_time': 26348}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.3.speaker
+  Field required [type=missing, input_value={'text': 'Скажите,...6368, 'end_time': 32070}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.4.speaker
+  Field required [type=missing, input_value={'text': 'А вы как...2110, 'end_time': 34192}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.5.speaker
+  Field required [type=missing, input_value={'text': 'Компани...4232, 'end_time': 39695}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.6.speaker
+  Field required [type=missing, input_value={'text': 'Помню, н...0487, 'end_time': 46910}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.7.speaker
+  Field required [type=missing, input_value={'text': 'Возможн...7350, 'end_time': 50350}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.8.speaker
+  Field required [type=missing, input_value={'text': 'Изучу, с...1692, 'end_time': 54253}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.9.speaker
+  Field required [type=missing, input_value={'text': 'Как могу...4373, 'end_time': 66778}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.10.speaker
+  Field required [type=missing, input_value={'text': 'Можно.', '...6838, 'end_time': 68379}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.11.speaker
+  Field required [type=missing, input_value={'text': 'Хорошо. ...8399, 'end_time': 75077}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.12.speaker
+  Field required [type=missing, input_value={'text': 'До свида...5118, 'end_time': 75639}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+lead_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+parasite_words_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+agreement
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.errors
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.confident
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+dialogue_outcomes
+  Input should be a valid dictionary or instance of DialogueOutcomes [type=model_type, input_value='Менеджер пер...е интерьера.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type
+2025-03-25 02:20:13,242 - server.main - ERROR - Ошибка при обработке данных: 20 validation errors for TranscriptionData
+status
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.0.speaker
+  Field required [type=missing, input_value={'text': 'Алло.', 'ro...0059, 'end_time': 10599}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.1.speaker
+  Field required [type=missing, input_value={'text': 'Добрый д...0679, 'end_time': 23565}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.2.speaker
+  Field required [type=missing, input_value={'text': 'Пока нет...4767, 'end_time': 26348}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.3.speaker
+  Field required [type=missing, input_value={'text': 'Скажите,...6368, 'end_time': 32070}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.4.speaker
+  Field required [type=missing, input_value={'text': 'А вы как...2110, 'end_time': 34192}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.5.speaker
+  Field required [type=missing, input_value={'text': 'Компани...4232, 'end_time': 39695}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.6.speaker
+  Field required [type=missing, input_value={'text': 'Помню, н...0487, 'end_time': 46910}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.7.speaker
+  Field required [type=missing, input_value={'text': 'Возможн...7350, 'end_time': 50350}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.8.speaker
+  Field required [type=missing, input_value={'text': 'Изучу, с...1692, 'end_time': 54253}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.9.speaker
+  Field required [type=missing, input_value={'text': 'Как могу...4373, 'end_time': 66778}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.10.speaker
+  Field required [type=missing, input_value={'text': 'Можно.', '...6838, 'end_time': 68379}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.11.speaker
+  Field required [type=missing, input_value={'text': 'Хорошо. ...8399, 'end_time': 75077}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.12.speaker
+  Field required [type=missing, input_value={'text': 'До свида...5118, 'end_time': 75639}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+lead_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+parasite_words_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+agreement
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.errors
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.confident
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+dialogue_outcomes
+  Input should be a valid dictionary or instance of DialogueOutcomes [type=model_type, input_value='Менеджер пер...е интерьера.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type
+2025-03-25 02:20:48,169 - server.main - ERROR - Ошибка при обработке данных: 20 validation errors for TranscriptionData
+status
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.0.speaker
+  Field required [type=missing, input_value={'text': 'Алло.', 'ro...0059, 'end_time': 10599}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.1.speaker
+  Field required [type=missing, input_value={'text': 'Добрый д...0679, 'end_time': 23565}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.2.speaker
+  Field required [type=missing, input_value={'text': 'Пока нет...4767, 'end_time': 26348}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.3.speaker
+  Field required [type=missing, input_value={'text': 'Скажите,...6368, 'end_time': 32070}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.4.speaker
+  Field required [type=missing, input_value={'text': 'А вы как...2110, 'end_time': 34192}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.5.speaker
+  Field required [type=missing, input_value={'text': 'Компани...4232, 'end_time': 39695}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.6.speaker
+  Field required [type=missing, input_value={'text': 'Помню, н...0487, 'end_time': 46910}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.7.speaker
+  Field required [type=missing, input_value={'text': 'Возможн...7350, 'end_time': 50350}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.8.speaker
+  Field required [type=missing, input_value={'text': 'Изучу, с...1692, 'end_time': 54253}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.9.speaker
+  Field required [type=missing, input_value={'text': 'Как могу...4373, 'end_time': 66778}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.10.speaker
+  Field required [type=missing, input_value={'text': 'Можно.', '...6838, 'end_time': 68379}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.11.speaker
+  Field required [type=missing, input_value={'text': 'Хорошо. ...8399, 'end_time': 75077}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+role_analysis.12.speaker
+  Field required [type=missing, input_value={'text': 'До свида...5118, 'end_time': 75639}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+lead_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+parasite_words_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+agreement
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.errors
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.confident
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+dialogue_outcomes
+  Input should be a valid dictionary or instance of DialogueOutcomes [type=model_type, input_value='Менеджер пер...е интерьера.', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/model_type
+2025-03-25 02:21:46,342 - server.main - ERROR - Ошибка при обработке данных: 2 validation errors for TranscriptionData
+lead_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.confident
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-03-25 02:26:42,768 - server.main - ERROR - Ошибка при обработке данных: 2 validation errors for TranscriptionData
+lead_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.confident
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-03-25 02:26:43,874 - server.main - ERROR - Ошибка при обработке данных: 2 validation errors for TranscriptionData
+lead_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.confident
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-03-25 02:27:34,530 - server.main - ERROR - Ошибка при обработке данных: 2 validation errors for TranscriptionData
+lead_analysis
+  Field required [type=missing, input_value={'transcript': 'Алло....и в будущем.'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+manager_evaluation.confident
+  Field required [type=missing, input_value={'score': 75}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-03-25 02:28:39,373 - server.main - ERROR - Ошибка при обработке данных: 'str' object has no attribute 'lead_qualification'
+2025-03-25 02:31:35,921 - server.main - ERROR - Критическая ошибка при обработке звонка: 'NoneType' object has no attribute 'stages'
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 163, in transcribe
+    message = format_message_for_bot(transcription_data, manager)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/server/repository.py", line 80, in format_message_for_bot
+    for stage, analysis in data.lead_analysis.stages.items():
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'stages'
+2025-03-25 11:23:09,776 - server.main - ERROR - Критическая ошибка при обработке звонка: М1
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 103, in transcribe
+    create_manager_sheet(company_sheet_url, manager)
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 260, in create_manager_sheet
+    manager_sheet.format("A1:М1", header_format)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1482, in format
+    return self.batch_format(formats)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1419, in batch_format
+    grid_range = a1_range_to_grid_range(range_name, self.id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/utils.py", line 513, in a1_range_to_grid_range
+    end_row_index, end_column_index = _a1_to_rowcol_unbounded(end_label or start_label)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/utils.py", line 467, in _a1_to_rowcol_unbounded
+    raise IncorrectCellLabel(label)
+gspread.exceptions.IncorrectCellLabel: М1
+2025-03-26 17:34:09,969 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [400]: Invalid values[12][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 202, in write_call_data_to_manager_sheet
+    manager_sheet.append_row(row_data)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [400]: Invalid values[12][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+2025-03-26 17:46:13,488 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [400]: Invalid values[12][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 202, in write_call_data_to_manager_sheet
+    manager_sheet.append_row(row_data)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [400]: Invalid values[12][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+2025-03-26 18:02:13,317 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [400]: Invalid values[12][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 202, in write_call_data_to_manager_sheet
+    manager_sheet.append_row(row_data)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [400]: Invalid values[12][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+2025-03-26 18:09:42,187 - server.main - ERROR - Критическая ошибка при обработке звонка: module 'fastapi.logger' has no attribute 'error'
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 163, in write_call_data_to_manager_sheet
+    gc = gspread.service_account()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/auth.py", line 328, in service_account
+    creds = SACredentials.from_service_account_file(filename, scopes=scopes)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/google/oauth2/service_account.py", line 260, in from_service_account_file
+    info, signer = _service_account_info.from_filename(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/google/auth/_service_account_info.py", line 78, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/klim-petrov/.config/gspread/service_account.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 203, in write_call_data_to_manager_sheet
+    logger.error(f"Ошибка при записи данных в таблицу менеджера: {e}")
+    ^^^^^^^^^^^^
+AttributeError: module 'fastapi.logger' has no attribute 'error'
+2025-03-26 18:13:43,651 - server.main - ERROR - Критическая ошибка при обработке звонка: [Errno 2] No such file or directory: '/home/klim-petrov/.config/gspread/service_account.json'
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 162, in write_call_data_to_manager_sheet
+    gc = gspread.service_account()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/auth.py", line 328, in service_account
+    creds = SACredentials.from_service_account_file(filename, scopes=scopes)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/google/oauth2/service_account.py", line 260, in from_service_account_file
+    info, signer = _service_account_info.from_filename(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/google/auth/_service_account_info.py", line 78, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/klim-petrov/.config/gspread/service_account.json'
+2025-03-26 19:08:00,914 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [400]: Invalid values[12][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 119, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 202, in write_call_data_to_manager_sheet
+    manager_sheet.append_row(row_data)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [400]: Invalid values[12][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+2025-03-26 19:20:23,090 - server.main - ERROR - Критическая ошибка при обработке звонка: HTTP Client says - Request timeout error
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/streams.py", line 672, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 730, in _request
+    await resp.start(conn)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1054, in start
+    with self._timer:
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 685, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 161, in transcribe
+    await bot.send_audio(chat_id=telegram_id, audio=audio_file)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 2396, in send_audio
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 182, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-26 19:22:31,091 - server.main - ERROR - Критическая ошибка при обработке звонка: HTTP Client says - Request timeout error
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/streams.py", line 672, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 730, in _request
+    await resp.start(conn)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1054, in start
+    with self._timer:
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 685, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 161, in transcribe
+    await bot.send_audio(chat_id=telegram_id, audio=audio_file)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 2396, in send_audio
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 182, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-26 19:40:30,668 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [400]: Invalid values[14][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 198, in write_call_data_to_manager_sheet
+    manager_sheet.append_row(row_data)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [400]: Invalid values[14][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+2025-03-26 19:50:21,091 - server.main - ERROR - Критическая ошибка при обработке звонка: HTTP Client says - Request timeout error
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/streams.py", line 672, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 730, in _request
+    await resp.start(conn)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1054, in start
+    with self._timer:
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 685, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 156, in transcribe
+    await bot.send_audio(chat_id=telegram_id, audio=audio_file)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 2396, in send_audio
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 182, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-26 20:01:43,090 - server.main - ERROR - Критическая ошибка при обработке звонка: HTTP Client says - Request timeout error
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/streams.py", line 672, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 730, in _request
+    await resp.start(conn)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1054, in start
+    with self._timer:
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 685, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 156, in transcribe
+    await bot.send_audio(chat_id=telegram_id, audio=audio_file, request_timeout=30)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 2396, in send_audio
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 182, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-26 20:20:29,091 - server.main - ERROR - Критическая ошибка при обработке звонка: HTTP Client says - Request timeout error
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/streams.py", line 672, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 730, in _request
+    await resp.start(conn)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1054, in start
+    with self._timer:
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 685, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 156, in transcribe
+    await bot.send_audio(chat_id=telegram_id, audio=audio_file)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 2396, in send_audio
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 182, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-26 20:24:56,101 - server.main - ERROR - Ошибка при отправке сообщений в Telegram: Bot.send_audio() got an unexpected keyword argument 'read_timeout'
+2025-03-26 20:30:15,090 - server.main - ERROR - Ошибка при отправке файла: HTTP Client says - Request timeout error
+2025-03-26 20:30:16,008 - server.main - ERROR - Ошибка при отправке сообщения: Telegram server says - Bad Request: can't parse entities: Unsupported start tag "property" at byte offset 1896
+2025-03-26 20:45:22,090 - server.main - ERROR - Ошибка отправки файла: HTTP Client says - Request timeout error
+2025-03-26 20:45:54,091 - server.main - ERROR - Ошибка отправки файла: HTTP Client says - Request timeout error
+2025-03-26 20:51:57,221 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [400]: Invalid values[20][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 198, in write_call_data_to_manager_sheet
+    manager_sheet.append_row(row_data)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [400]: Invalid values[20][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+2025-03-26 20:55:36,859 - server.main - ERROR - Критическая ошибка при обработке звонка: [Errno 2] No such file or directory: '/home/klim-petrov/.config/gspread/service_account.json'
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 159, in write_call_data_to_manager_sheet
+    gc = gspread.service_account()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/auth.py", line 328, in service_account
+    creds = SACredentials.from_service_account_file(filename, scopes=scopes)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/google/oauth2/service_account.py", line 260, in from_service_account_file
+    info, signer = _service_account_info.from_filename(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/google/auth/_service_account_info.py", line 78, in from_filename
+    with io.open(filename, "r", encoding="utf-8") as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/klim-petrov/.config/gspread/service_account.json'
+2025-03-26 21:02:36,886 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [400]: Invalid values[20][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 202, in write_call_data_to_manager_sheet
+    manager_sheet.append_row(row_data)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1808, in append_row
+    return self.append_rows(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/worksheet.py", line 1858, in append_rows
+    res = self.client.values_append(self.spreadsheet_id, range_label, params, body)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 191, in values_append
+    r = self.request("post", url, params=params, json=body)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [400]: Invalid values[20][12]: list_value {
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\237\320\276\320\275\320\270\320\274\320\260\321\216, \321\215\321\202\320\276 \320\274\320\276\320\266\320\265\321\202 \320\261\321\213\321\202\321\214 \321\201\320\273\320\276\320\266\320\275\320\276 \320\277\321\200\320\265\320\264\321\201\320\272\320\260\320\267\320\260\321\202\321\214. \320\234\320\276\320\263\321\203 \320\273\320\270 \321\217 \321\201\320\262\321\217\320\267\320\260\321\202\321\214\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \321\207\321\202\320\276\320\261\321\213 \320\276\320\261\321\201\321\203\320\264\320\270\321\202\321\214 \321\215\321\202\320\276?\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\264\320\260\320\265\321\202 \320\262\320\276\320\277\321\200\320\276\321\201, \320\272\320\276\321\202\320\276\321\200\321\213\320\271 \320\274\320\276\320\266\320\265\321\202 \320\262\321\213\320\267\320\262\320\260\321\202\321\214 \321\203 \320\272\320\273\320\270\320\265\320\275\321\202\320\260 \320\264\320\270\321\201\320\272\320\276\320\274\321\204\320\276\321\200\321\202, \321\202\320\260\320\272 \320\272\320\260\320\272 \320\272\320\273\320\270\320\265\320\275\321\202 \321\203\320\266\320\265 \320\262\321\213\321\200\320\260\320\267\320\270\320\273 \320\275\320\265\321\203\320\262\320\265\321\200\320\265\320\275\320\275\320\276\321\201\321\202\321\214 \320\262 \321\201\321\200\320\276\320\272\320\260\321\205."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\237\320\276\320\264\321\201\320\272\320\260\320\266\320\270\321\202\320\265... \320\224\320\260, \320\260 \320\272\320\276\320\263\320\264\320\260 \320\261\321\203\320\264\320\265\321\202 \320\260\320\272\321\202\321\203\320\260\320\273\321\214\320\275\320\276?"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\245\320\276\321\200\320\276\321\210\320\276, \321\217 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216, \320\272\320\260\320\272 \320\262\321\213 \320\270 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273\320\270.\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\275\320\265 \321\203\321\207\320\265\320\273, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\277\321\200\320\265\320\264\320\273\320\276\320\266\320\270\320\273 \320\277\320\276\320\267\320\262\320\276\320\275\320\270\321\202\321\214 \320\277\320\276\321\200\320\260\320\275\321\214\321\210\320\265 \321\204\320\265\320\262\321\200\320\260\320\273\321\217, \320\260 \320\275\320\265 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\224\320\260\320\262\320\260\320\271\321\202\320\265 \321\202\320\276\320\263\320\264\320\260 \321\207\320\265\321\200\320\265\320\267 \320\275\320\265\320\264\320\265\320\273\321\216 \321\201\320\262\321\217\320\266\320\265\320\274\321\201\321\217 \321\201 \320\262\320\260\320\274\320\270."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  values {
+    struct_value {
+      fields {
+        key: "error"
+        value {
+          struct_value {
+            fields {
+              key: "advice"
+              value {
+                string_value: "\320\227\320\260\320\274\320\265\320\275\320\270\321\202\321\214 \320\275\320\260: \'\320\241\320\277\320\260\321\201\320\270\320\261\320\276 \320\267\320\260 \320\262\320\260\321\210\320\265 \320\262\321\200\320\265\320\274\321\217. \320\257 \321\201\320\262\321\217\320\266\321\203\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270 \320\261\320\273\320\270\320\266\320\265 \320\272 \321\204\320\265\320\262\321\200\320\260\320\273\321\216. \320\225\321\201\320\273\320\270 \321\203 \320\262\320\260\321\201 \320\277\320\276\321\217\320\262\321\217\321\202\321\201\321\217 \320\262\320\276\320\277\321\200\320\276\321\201\321\213, \320\277\320\276\320\266\320\260\320\273\321\203\320\271\321\201\321\202\320\260, \320\275\320\265 \321\201\321\202\320\265\321\201\320\275\321\217\320\271\321\202\320\265\321\201\321\214 \320\276\320\261\321\200\320\260\321\211\320\260\321\202\321\214\321\201\321\217. \320\222\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276!\'"
+              }
+            }
+            fields {
+              key: "analysis"
+              value {
+                string_value: "\320\234\320\265\320\275\320\265\320\264\320\266\320\265\321\200 \320\267\320\260\320\262\320\265\321\200\321\210\320\260\320\265\321\202 \321\200\320\260\320\267\320\263\320\276\320\262\320\276\321\200 \320\261\320\265\320\267 \320\277\320\276\320\264\321\202\320\262\320\265\321\200\320\266\320\264\320\265\320\275\320\270\321\217 \321\201\320\273\320\265\320\264\321\203\321\216\321\211\320\265\320\263\320\276 \321\210\320\260\320\263\320\260 \320\270\320\273\320\270 \321\203\321\202\320\276\321\207\320\275\320\265\320\275\320\270\321\217, \321\207\321\202\320\276 \320\272\320\273\320\270\320\265\320\275\321\202 \320\261\321\203\320\264\320\265\321\202 \320\266\320\264\320\260\321\202\321\214 \320\267\320\262\320\276\320\275\320\272\320\260."
+              }
+            }
+            fields {
+              key: "quote"
+              value {
+                string_value: "\320\222 \321\202\320\260\320\272\320\276\320\274 \321\201\320\273\321\203\321\207\320\260\320\265 \320\277\321\200\320\276\321\211\320\260\321\216\321\201\321\214 \321\201 \320\262\320\260\320\274\320\270, \320\262\321\201\320\265\320\263\320\276 \320\264\320\276\320\261\321\200\320\276\320\263\320\276."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+2025-03-26 21:05:46,090 - server.main - ERROR - Критическая ошибка при обработке звонка: HTTP Client says - Request timeout error
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/streams.py", line 672, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    async with session.post(
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client.py", line 730, in _request
+    await resp.start(conn)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 1054, in start
+    with self._timer:
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiohttp/helpers.py", line 685, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 156, in transcribe
+    await bot.send_audio(chat_id=telegram_id, audio=audio_file)
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 2396, in send_audio
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 498, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 182, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
+2025-03-26 21:09:47,750 - server.main - ERROR - Ошибка при отправке сообщений в Telegram: 'RecommendationItem' object has no attribute 'get'
+2025-03-26 21:58:30,512 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [500]: Internal error encountered.
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 130, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 192, in write_call_data_to_manager_sheet
+    company_sheet = client.open_by_url(sheet_url)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/client.py", line 189, in open_by_url
+    return self.open_by_key(extract_id_from_url(url))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/client.py", line 174, in open_by_key
+    raise ex
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/client.py", line 168, in open_by_key
+    spreadsheet = Spreadsheet(self.http_client, {"id": key})
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/spreadsheet.py", line 29, in __init__
+    metadata = self.fetch_sheet_metadata()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [500]: Internal error encountered.
+2025-03-26 22:02:41,213 - server.main - ERROR - Ошибка при отправке сообщений в Telegram: Telegram server says - Bad Request: document can't be mixed with other media types
+2025-03-26 22:06:13,932 - server.main - ERROR - Критическая ошибка при обработке звонка: APIError: [503]: The service is currently unavailable.
+Traceback (most recent call last):
+  File "/home/klim-petrov/projects/smartLITE/server/main.py", line 114, in transcribe
+    write_call_data_to_manager_sheet(
+  File "/home/klim-petrov/projects/smartLITE/core.py", line 192, in write_call_data_to_manager_sheet
+    company_sheet = client.open_by_url(sheet_url)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/client.py", line 189, in open_by_url
+    return self.open_by_key(extract_id_from_url(url))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/client.py", line 174, in open_by_key
+    raise ex
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/client.py", line 168, in open_by_key
+    spreadsheet = Spreadsheet(self.http_client, {"id": key})
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/spreadsheet.py", line 29, in __init__
+    metadata = self.fetch_sheet_metadata()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/spreadsheet.py", line 230, in fetch_sheet_metadata
+    return self.client.fetch_sheet_metadata(self.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 305, in fetch_sheet_metadata
+    r = self.request("get", url, params=params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/klim-petrov/projects/smartLITE/venv/lib/python3.12/site-packages/gspread/http_client.py", line 128, in request
+    raise APIError(response)
+gspread.exceptions.APIError: APIError: [503]: The service is currently unavailable.

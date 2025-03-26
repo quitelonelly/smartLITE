@@ -6,107 +6,6 @@ import gspread
 def is_user_registered(sheet, tgid: int) -> bool:
     """
     Проверяет, зарегистрирован ли пользователь по его telegram_id.
-    Возвращает True@app.post("/transcribe/{id}")
-async def transcribe(
-    id: int = Path(..., description="ID компании"),  # ID компании
-    data: str = Form(..., description="Данные транскрипции и анализа в формате JSON"),  # JSON данные как строка
-    audio_file: UploadFile = File(..., description="Аудиофайл"),  # Аудиофайл
-    manager: str = Form(..., description="Имя менеджера")  # Имя менеджера
-):
-    logger.info(f"Получены данные для компании с ID: {id}.")
-    try:
-        # Парсим JSON-данные
-        data_dict = json.loads(data)
-        transcription_data = TranscriptionData(**data_dict)
-
-        # Ищем Telegram ID по ID компании
-        sheet = setup_google_sheets()
-        telegram_id = get_telegram_id_by_company_id(sheet, id)
-
-        if not telegram_id:
-            logger.error(f"Telegram ID для компании с ID {id} не найден.")
-            return {"error": "Telegram ID не найден"}
-
-        # Рассчитываем общее время звонка
-        total_duration = calculate_total_call_duration(transcription_data.role_analysis)
-
-        # Получаем URL таблицы компании
-        company_sheet_url = find_company_sheet_by_tgid(telegram_id)
-        
-        if not company_sheet_url:
-            logger.error(f"Таблица компании для Telegram ID {telegram_id} не найдена.")
-            return {"error": "Таблица компании не найдена"}
-
-        # Записываем данные в лист менеджера
-        is_qualified = transcription_data.lead_analysis.final_verdict == "Квалифицирован"
-        write_call_data_to_manager_sheet(company_sheet_url, manager, f"Время звонка: {total_duration}", is_qualified)
-
-        # Создаем временный файл для транскрипции (чистый текст, без HTML)
-        with tempfile.NamedTemporaryFile(mode='w+', suffix='.html', delete=False, encoding='utf-8') as temp_file:
-            temp_file.write('\ufeff')  # Добавляем BOM
-            # Записываем транскрипцию в файл
-            temp_file.write(f"<h2>Общее время звонка: {total_duration:.2f} секунд</h2>\n\n")
-            temp_file.write(f"Менеджер: {manager}")
-            for role in transcription_data.role_analysis:
-                start_time = ms_to_seconds(role.start_time)
-                end_time = ms_to_seconds(role.end_time)
-                temp_file.write(f"<br>👤 {role.role}:</br>")
-                temp_file.write(f"🗣️ Текст: {role.text}\n")
-                temp_file.write(f"<br>⏱️ Время: {start_time:.2f} - {end_time:.2f} секунд\n\n</br>")
-                temp_file.write("<hr></hr>")
-            temp_file_path = temp_file.name
-
-        # Читаем содержимое файла и создаем BufferedInputFile
-        with open(temp_file_path, 'rb') as file:
-            file_content = file.read()
-            input_file = BufferedInputFile(file_content, filename="Транскрипция.html")
-
-        # Сохраняем аудиофайл временно
-        audio_path = f"temp_audio_{id}.mp3"
-        with open(audio_path, "wb") as buffer:
-            buffer.write(await audio_file.read())
-
-        # Читаем содержимое аудиофайла и создаем BufferedInputFile
-        with open(audio_path, 'rb') as audio:
-            audio_content = audio.read()
-            input_audio = BufferedInputFile(audio_content, filename=audio_file.filename)
-
-        # Отправляем аудиофайл
-        await bot.send_audio(chat_id=telegram_id, audio=input_audio)
-
-        # Небольшая задержка перед отправкой документа
-        await asyncio.sleep(1)
-
-        # Отправляем документ с транскрипцией
-        await bot.send_document(chat_id=telegram_id, document=input_file)
-
-        # Форматируем остальные данные для отправки в Telegram (в формате HTML)
-        message = format_message_for_bot(transcription_data, manager)  # Передаем менеджера в функцию
-
-        # Отправляем сообщение с анализом лида и итоговым вердиктом в формате HTML
-        await bot.send_message(chat_id=telegram_id, text=message, parse_mode="HTML")
-
-        return {
-            "id_company": id,
-            "status": "success",
-            "message": "Данные успешно отправлены в Telegram.",
-            "manager": manager  # Возвращаем имя менеджера в ответе
-        }
-    except Exception as e:
-        logger.error(f"Ошибка при обработке данных: {e}")
-        return {"error": str(e)}
-    finally:
-        # Удаляем временные файлы после отправки
-        if 'temp_file_path' in locals():
-            try:
-                os.unlink(temp_file_path)
-            except Exception as e:
-                logger.error(f"Ошибка при удалении временного файла транскрипции: {e}")
-        if 'audio_path' in locals():
-            try:
-                os.unlink(audio_path)
-            except Exception as e:
-                logger.error(f"Ошибка при удалении временного аудиофайла: {e}"), если зарегистрирован, иначе False.
     """
     try:
         # Получаем все данные из таблицы
@@ -177,10 +76,6 @@ def create_new_sheet(company_name):
         service_account_email = os.getenv('SERVICE_ACC')  # Email сервисного аккаунта
         new_sheet.share(service_account_email, perm_type='user', role='writer')
         
-        # Предоставляем доступ вашему аккаунту (опционально)
-        my_email = os.getenv('MY_ACC')  # Ваш email
-        if my_email:
-            new_sheet.share(my_email, perm_type='user', role='writer')
         
         return new_sheet.url
     except Exception as e:
@@ -252,10 +147,14 @@ def get_managers_from_sheet(sheet_url: str) -> List[str]:
         return []
     
 def write_call_data_to_manager_sheet(
-    sheet_url: str, manager_name: str, total_duration: float, is_qualified: bool, kval_percentage: float, parasite_words: str
+    sheet_url: str,
+    manager_name: str,
+    transcription_data: dict,
+    total_duration: float,
+    call_datetime: str = None
 ):
     """
-    Записывает данные о звонке в лист менеджера.
+    Записывает данные звонка и суммирует токены в указанный столбец
     """
     try:
         scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
@@ -263,28 +162,72 @@ def write_call_data_to_manager_sheet(
             "/home/klim-petrov/projects/smartLITE/credentials.json", scope
         )
         client = gspread.authorize(creds)
+        
+        # 1. Открываем главную таблицу
+        main_sheet = client.open_by_key("1CoDQJn0T_scUV7ZsbYU8x2nZTzu_F9CBrculeQIG2KA").sheet1
+        
+        # 2. Находим столбец "token" (колонка E)
+        token_column = 11 # Колонка E (5-я колонка)
+        
+        # 3. Получаем все значения из столбца
+        tokens_column_values = main_sheet.col_values(token_column)
+        
+        # 4. Суммируем существующие значения (пропускаем заголовок)
+        total_tokens = 0
+        for i, value in enumerate(tokens_column_values[1:], start=2):  # Пропускаем заголовок
+            try:
+                total_tokens += int(value) if value else 0
+            except ValueError:
+                print(f"Ошибка преобразования значения в строке {i}: {value}")
+        
+        # 5. Добавляем новые токены
+        new_tokens = transcription_data.get("token_usage", {}).get("total", 0)
+        total_tokens += new_tokens
+        
+        # 6. Обновляем последнюю ячейку в столбце
+        last_row = len(tokens_column_values) + 1
+        main_sheet.update_cell(last_row, token_column, str(total_tokens))
+        
+        # 7. Записываем данные в таблицу менеджера (как раньше)
         company_sheet = client.open_by_url(sheet_url)
-
-        # Находим лист менеджера
         manager_sheet = company_sheet.worksheet(f"Менеджер {manager_name}")
 
-        # Записываем данные в лист
+        if call_datetime is None:
+            from datetime import datetime
+            call_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
         row_data = [
-            total_duration,  # Время
-            "Квал" if is_qualified else "Неквал",  # Квал/неквал
-            kval_percentage,  # Процент квала
-            parasite_words,  # Слова паразиты
+            call_datetime,
+            total_duration,
+            transcription_data.get("manager_evaluation", {}).get("score", 0),
+            "\n".join(transcription_data.get("manager_errors", [])),
+            transcription_data.get("dialogue_outcomes", ""),
+            "Да" if transcription_data.get("lead_qualification", {}).get("qualified", "нет") == "да" else "Нет",
+            "\n".join(transcription_data.get("lead_qualification", {}).get("criteria", [])),
+            transcription_data.get("objection_handling", {}).get("evaluation", "N/A"),
+            transcription_data.get("client_readiness", {}).get("level", "Не определено"),
+            transcription_data.get("client_readiness", {}).get("explanation", ""),
+            transcription_data.get("manager_confidence", {}).get("confidence", "Не уверен"),
+            transcription_data.get("product_expertise", {}).get("level", "N/A"),
+            "\n---\n".join(
+                f"Цитата: {rec['error']['quote']}\nАнализ: {rec['error']['analysis']}\nСовет: {rec['error']['advice']}"
+                for rec in transcription_data.get("recommendations", [])
+            ) if transcription_data.get("recommendations") else "Нет рекомендаций",
+            str(new_tokens)  # Добавляем использованные токены в конец строки
         ]
+
         manager_sheet.append_row(row_data)
+        
+        print(f"Успешно записано. Новые токены: {new_tokens}, Общий баланс: {total_tokens}")
 
     except Exception as e:
-        print(f"Ошибка при записи данных в лист менеджера: {e}")
-
+        print(f"Ошибка при записи данных: {str(e)}")
+        raise
 
 
 def create_manager_sheet(sheet_url: str, manager_name: str):
     """
-    Создает лист для менеджера с шапкой таблицы, если он еще не существует.
+    Создает лист для менеджера с полной шапкой таблицы анализа звонков
     """
     try:
         scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
@@ -294,24 +237,42 @@ def create_manager_sheet(sheet_url: str, manager_name: str):
         client = gspread.authorize(creds)
         company_sheet = client.open_by_url(sheet_url)
 
-        # Проверяем, существует ли лист менеджера
+        sheet_title = f"Менеджер {manager_name}"
+        
         try:
-            manager_sheet = company_sheet.worksheet(f"Менеджер {manager_name}")
+            manager_sheet = company_sheet.worksheet(sheet_title)
         except gspread.WorksheetNotFound:
-            # Если лист не существует, создаем его
-            manager_sheet = company_sheet.add_worksheet(title=f"Менеджер {manager_name}", rows="100", cols="20")
-            # Создаем шапку таблицы
-            header = ["Время звонка", "Квал/неквал", "%Квала", "СловаПаразиты"]
-            manager_sheet.append_row(header)
-        else:
-            # Если лист существует, проверяем, есть ли шапка
-            existing_data = manager_sheet.get_all_values()
-            if not existing_data:  # Если лист пустой
-                header = ["Время звонка", "Квал/неквал", "%Квала", "СловаПаразиты"]
-                manager_sheet.append_row(header)
+            manager_sheet = company_sheet.add_worksheet(title=sheet_title, rows="1000", cols="20")
+        
+        # Полная шапка таблицы
+        header = [
+            "Дата и время",
+            "Общее время звонка (сек)",
+            "Оценка менеджера (%)",
+            "Ошибки менеджера",
+            "Итог диалога",
+            "Квалификация лида",
+            "Критерии квалификации",
+            "Отработка возражений",
+            "Готовность клиента",
+            "Пояснение готовности",
+            "Уверенность менеджера",
+            "Экспертиза в продукте",
+            "Рекомендации",
+        ]
+        
+        manager_sheet.append_row(header)
+        
+        # Настраиваем форматирование
+        header_format = {
+            "textFormat": {"bold": True},
+            "backgroundColor": {"red": 0.8, "green": 0.8, "blue": 0.8}
+        }
+        manager_sheet.format("A1:M1", header_format)
 
     except Exception as e:
-        print(f"Ошибка при создании листа для менеджера: {e}")
+        print(f"error: {e}")
+        raise
 
 def get_company_id_by_tgid(sheet, tgid: int) -> Optional[int]:
     """
@@ -327,3 +288,37 @@ def get_company_id_by_tgid(sheet, tgid: int) -> Optional[int]:
     except Exception as e:
         print(f"Ошибка при поиске ID компании: {e}")
         return None
+    
+def check_and_mark_key(sheet, key):
+    """
+    Проверяет ключ в листе 'Keys' и отмечает его как использованный, если он не использован.
+    Возвращает True, если ключ валиден и был успешно отмечен, False в противном случае.
+    """
+    try:
+        # Получаем доступ ко всей таблице, а не к конкретному листу
+        spreadsheet = sheet.spreadsheet
+        
+        # Получаем лист 'Keys'
+        try:
+            keys_sheet = spreadsheet.worksheet('Keys')
+        except gspread.WorksheetNotFound:
+            print("Лист 'Keys' не найден в таблице")
+            return False
+        
+        # Получаем все ключи и их статусы
+        keys = keys_sheet.col_values(1)  # Первый столбец - ключи
+        statuses = keys_sheet.col_values(2)  # Второй столбец - статусы
+        
+        # Ищем ключ в списке
+        for i, (k, s) in enumerate(zip(keys, statuses), start=1):
+            if k == key:
+                if s.lower() == 'false' or s == '':
+                    # Помечаем ключ как использованный
+                    keys_sheet.update_cell(i, 2, 'TRUE')
+                    return True
+                else:
+                    return False
+        return False
+    except Exception as e:
+        print(f"Ошибка при проверке ключа: {e}")
+        return False

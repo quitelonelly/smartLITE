@@ -1,29 +1,62 @@
-from pydantic import BaseModel
-from typing import List, Dict, Optional
+from pydantic import BaseModel, Field
+from typing import List, Dict, Optional, Union
 
 class RoleAnalysis(BaseModel):
     text: str
-    speaker: str
     role: str
     start_time: int
     end_time: int
 
-class StageAnalysis(BaseModel):
-    qualified: bool
+class ManagerEvaluationDetail(BaseModel):
+    score: int
     reason: str
-    recommendation: Optional[str] = None
 
-class LeadAnalysis(BaseModel):
-    stages: Dict[str, StageAnalysis]
-    final_verdict: str
-    final_reason: str
-    final_full_reason: str
-    kval_percentage: float
+class ManagerEvaluation(BaseModel):
+    score: int
+    explanation: str
+    details: Dict[str, ManagerEvaluationDetail]
+
+class LeadQualification(BaseModel):
+    qualified: str  # "да" или "нет"
+    criteria: List[str] = Field(default_factory=list)
+
+class ObjectionHandling(BaseModel):
+    evaluation: str  # "да" или "нет"
+    has_objections: bool
+    na_option: bool = False
+
+class ClientReadiness(BaseModel):
+    level: str  # "Не интересно", "Слабый интерес", "Сильный интерес"
+    explanation: str
+
+class ManagerConfidence(BaseModel):
+    confidence: str  # "уверен" или "не уверен"
+    criteria: List[str]
+
+class ProductExpertise(BaseModel):
+    level: str  # уровень экспертизы
+    is_na: bool  # True если вопросы о продукте отсутствовали
+
+class RecommendationItem(BaseModel):
+    quote: Optional[str] = None
+    analysis: Optional[str] = None
+    advice: Optional[str] = None
+
+class Recommendation(BaseModel):
+    error: RecommendationItem
 
 class TranscriptionData(BaseModel):
-    status: str
+    summary: str
     transcript: str
     role_analysis: List[RoleAnalysis]
-    lead_analysis: LeadAnalysis
-    parasite_words_analysis: str
-    agreement: str  # Добавляем поле agreement
+    manager_evaluation: ManagerEvaluation
+    manager_errors: List[str]
+    dialogue_outcomes: str
+    lead_qualification: LeadQualification
+    lead_lost: Optional[str] = None
+    objection_handling: ObjectionHandling
+    client_readiness: ClientReadiness
+    manager_confidence: ManagerConfidence
+    product_expertise: ProductExpertise
+    recommendations: List[Dict[str, RecommendationItem]]
+    token_usage: Optional[Dict] = None
